@@ -1,7 +1,19 @@
-/*!
-* Start Bootstrap - Personal v1.0.1 (https://startbootstrap.com/template-overviews/personal)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-personal/blob/master/LICENSE)
-*/
-// This file is intentionally blank
-// Use this file to add JavaScript to your project
+function sendEmail(event) {
+    event.preventDefault();
+
+    const serviceID = "service_2q3ka59";
+    const templateID = "template_fiqorhb";
+    const publicKey = "RPjZNMABQKUWQUBJC";
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    const message = document.getElementById("message").value;
+
+    const params = { name, email, phone, message };
+
+    emailjs.init(publicKey);
+    emailjs.send(serviceID, templateID, params)
+        .then(() => alert("Message sent!"))
+        .catch((error) => alert(`Error: ${JSON.stringify(error)}`));
+}
