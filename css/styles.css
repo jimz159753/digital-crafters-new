@@ -11660,6 +11660,11 @@ html {
     width: 1.5vw;
     left: -2vw;
   }
+} 
+
+.team-container img {
+  height: 200px;
+  border-radius: 50%;
 }
 
 @keyframes slides {
@@ -11671,11 +11676,26 @@ html {
   }
 }
 
+@media (min-width: 412px) {
+  .team-container {
+    display: flex;
+    justify-content: space-between;
+  }
+ }
+
+@media (max-width: 412px) {
+  .team-container {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 .logos {
   overflow: hidden;
   padding: 30px 0px;
   white-space: nowrap;
   position: relative;
+  margin-top: 40px;
 }
 
 .logos:before, .logos:after {
@@ -11706,6 +11726,32 @@ html {
   animation-play-state: paused;
 }
 
+.logos_items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .logo_items img{
-  height: 100px;
+  height: 70px;
+  margin: 0 15px;
+}
+
+.services {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.services h4 {
+  text-align: left;
+  background: -webkit-linear-gradient(315deg, #1e30f3 0%, #e21e80 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.services p {
+  color: #000;
+  text-align: left;
 }
