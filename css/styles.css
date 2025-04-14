@@ -11755,3 +11755,21 @@ html {
   color: #000;
   text-align: left;
 }
+
+@media (max-width: 768px) {
+  .project-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .project-container img {
+    width: 100%;
+  }
+ }
+
+@media (min-width: 768px) {
+  .project-container {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
