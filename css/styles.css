@@ -11666,6 +11666,7 @@ html {
   height: 200px;
   border-radius: 50%;
   background-color: #E4E6E7;
+  filter: grayscale(1)
 }
 
 @keyframes slides {
@@ -11773,10 +11774,28 @@ html {
     display: flex;
     flex-wrap: nowrap;
   }
+
+  .project-container img {
+    height: 300px;
+    width: 300px;
+  }
 }
 
 @media (max-width: 412px) {
   .office-worker {
     margin-bottom: 40px;
   }
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../assets/images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  filter: brightness(0.5);
 }
