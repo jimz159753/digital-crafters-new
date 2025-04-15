@@ -11665,6 +11665,7 @@ html {
 .team-container img {
   height: 200px;
   border-radius: 50%;
+  background-color: #E4E6E7;
 }
 
 @keyframes slides {
@@ -11771,5 +11772,11 @@ html {
   .project-container {
     display: flex;
     flex-wrap: nowrap;
+  }
+}
+
+@media (max-width: 412px) {
+  .office-worker {
+    margin-bottom: 40px;
   }
 }
